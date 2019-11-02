@@ -1,0 +1,33 @@
+/*
+    Created By : Sonu Sharma
+    2-11-19      12:49
+    Floyd's Cycle Detection
+    -----------------------
+*/
+bool has_cycle(SinglyLinkedListNode* head) {
+    if(head==NULL){
+        return false;
+    }
+    else if(head->next==NULL){
+        return false;
+    }
+    SinglyLinkedListNode* fast=head;
+    SinglyLinkedListNode* slow=head;
+    while(fast!=NULL && fast->next!=NULL){
+        fast=fast->next->next;
+        slow=slow->next;
+        if(slow==fast){
+            return true;
+        }
+    }
+    return false;
+}
+int main(){
+  Once the cycle has been detected 
+  then move the slow pointer to head
+  and fast remain as it and move both 
+  the pointers with the same speed 
+  wherever they will meet that point will 
+  origin of cycle and you can easily remove 
+  cycle by that
+}
