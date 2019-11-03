@@ -2,7 +2,9 @@
   Created By : Sonu Sharma
   3-11-19      19:28
 */
-
+ // Basic approach is same : Calculate the sum of all the stacks and keep comparing one by one until they become Equal
+ // IMP dont use Vector on hackerrank for poping the element from the front in hackerrank platform other wise it may 
+ // Give you TLE
 #include <bits/stdc++.h>
 using namespace std;
 int isGreater(int x,int y,int z){
